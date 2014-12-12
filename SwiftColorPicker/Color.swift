@@ -2,8 +2,7 @@
 //  Color.swift
 //  SwiftColorPicker
 //
-//  Created by Christopher Stadler on 12/3/14.
-//  Copyright (c) 2014 Epiphanic Studios. All rights reserved.
+//  Created by cstad on 12/3/14.
 //
 
 import UIKit
