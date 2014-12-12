@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,29 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Color Picker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7q-4a-aoj">
-                                <rect key="frame" x="253" y="20" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZf-lh-W15" customClass="DrawView" customModule="SwiftColorPicker" customModuleProvider="target">
-                                <rect key="frame" x="16" y="49" width="568" height="531"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="Tgc-Ei-gRd">
+                                <rect key="frame" x="148" y="443" width="304" height="31"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="a09-Uy-3cu" appends="YES" id="H2v-Dw-QVA"/>
+                                    <action selector="sliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Ma-ab-D0j"/>
                                 </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-PX-uUp">
+                                <rect key="frame" x="150" y="395" width="300" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyR-A0-q9t" customClass="ColorPicker" customModule="SwiftColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="150" y="28" width="300" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="I7q-4a-aoj" secondAttribute="centerX" id="DJp-mN-cNA"/>
-                            <constraint firstItem="OZf-lh-W15" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="b5t-Vn-D2V"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OZf-lh-W15" secondAttribute="bottom" constant="20" id="iwZ-9a-Eku"/>
-                            <constraint firstItem="OZf-lh-W15" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m4K-vv-rlJ"/>
+                            <constraint firstAttribute="centerX" secondItem="Tgc-Ei-gRd" secondAttribute="centerX" id="1Hy-5T-G6z"/>
+                            <constraint firstAttribute="centerX" secondItem="Np4-PX-uUp" secondAttribute="centerX" id="GHF-JR-18O"/>
+                            <constraint firstAttribute="centerX" secondItem="wyR-A0-q9t" secondAttribute="centerX" id="aq4-bB-ueW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedColorView" destination="Np4-PX-uUp" id="JUR-Qb-YjQ"/>
+                        <outlet property="slider" destination="Tgc-Ei-gRd" id="ErA-Ym-jsP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="a09-Uy-3cu"/>
