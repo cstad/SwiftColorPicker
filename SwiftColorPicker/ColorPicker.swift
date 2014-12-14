@@ -2,6 +2,10 @@
 //  ColorPicker.swift
 //  SwiftColorPicker
 //
+//  This is the main entry point for the SwiftColorPicker control.
+//  The UIView, in your app, that this class is attached to will dictate the demensions of the ColorPicker.
+//  Everything is created programmatically so there is no need to deal with Interface Builder to use this control.
+//
 //  Created by Christopher Stadler on 12/10/14.
 //  Copyright (c) 2014 Epiphanic Studios. All rights reserved.
 //
@@ -16,20 +20,17 @@ class ColorPicker: UIView {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-println("ColorPicker ==> init decoder frame \(frame)")
+        // Init the view with a black border
         self.layer.borderColor = UIColor.blackColor().CGColor
         self.layer.borderWidth = 1
-        
-        backgroundColor = UIColor.clearColor()
-        
+// TODO: INIT WITH USER DEFINED COLOR
+        // Init with default color of red
         color = UIColor.redColor()
-println("color: \(color)")
+        // Call startup method to create the subviews needed for the control
         startup()
     }
     
     func startup() {
-        println("ColorPicker ==> startup")
-        
         // Init new ColorGradientView subview
         colorView = ColorGradientView(frame: CGRect(x: 0, y: 0, width: 300, height: 300), color: color)
         // Add colorGradientView as a subview of this view
@@ -45,6 +46,7 @@ println("color: \(color)")
     func colorSelected(point: CGPoint) {
 println("colorSelected \(point)")
 // TODO: DETERMINE THE SELECTED COLOR
+        // Call notifyViews to notify them of the color selection change
         notifyViews()
     }
     

@@ -11,7 +11,6 @@
 		1BA9CF401A2D4C03003CD248 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9CF3F1A2D4C03003CD248 /* ViewController.swift */; };
 		1BA9CF431A2D4C03003CD248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA9CF411A2D4C03003CD248 /* Main.storyboard */; };
 		1BA9CF451A2D4C03003CD248 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA9CF441A2D4C03003CD248 /* Images.xcassets */; };
-		1BA9CF481A2D4C03003CD248 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BA9CF461A2D4C03003CD248 /* LaunchScreen.xib */; };
 		1BA9CF541A2D4C03003CD248 /* SwiftColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9CF531A2D4C03003CD248 /* SwiftColorPickerTests.swift */; };
 		1BA9CF5E1A2D4D59003CD248 /* CrossHairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9CF5D1A2D4D59003CD248 /* CrossHairView.swift */; };
 		1BC916A71A3A7C9E00B44F8F /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC916A61A3A7C9E00B44F8F /* ColorPicker.swift */; };
@@ -37,7 +36,6 @@
 		1BA9CF3F1A2D4C03003CD248 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1BA9CF421A2D4C03003CD248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BA9CF441A2D4C03003CD248 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1BA9CF471A2D4C03003CD248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1BA9CF4D1A2D4C03003CD248 /* SwiftColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA9CF521A2D4C03003CD248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA9CF531A2D4C03003CD248 /* SwiftColorPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerTests.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 				1BA9CF3F1A2D4C03003CD248 /* ViewController.swift */,
 				1BA9CF411A2D4C03003CD248 /* Main.storyboard */,
 				1BA9CF441A2D4C03003CD248 /* Images.xcassets */,
-				1BA9CF461A2D4C03003CD248 /* LaunchScreen.xib */,
 				1BA9CF3B1A2D4C03003CD248 /* Supporting Files */,
 			);
 			path = SwiftColorPicker;
@@ -208,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA9CF431A2D4C03003CD248 /* Main.storyboard in Resources */,
-				1BA9CF481A2D4C03003CD248 /* LaunchScreen.xib in Resources */,
 				1BA9CF451A2D4C03003CD248 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,14 +258,6 @@
 				1BA9CF421A2D4C03003CD248 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1BA9CF461A2D4C03003CD248 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BA9CF471A2D4C03003CD248 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
