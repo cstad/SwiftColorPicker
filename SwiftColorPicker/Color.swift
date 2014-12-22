@@ -11,9 +11,6 @@ class Color {
     let colorLayer: CAGradientLayer!
     let colorLayerTop: UIColor!
     let colorLayerBottom: UIColor = UIColor.whiteColor()
-
-//    let grayScaleLayerLayer: CAGradientLayer!
-//    let grayScaleLayerLeft: UIColor = UIColor.blackColor()
     
     init(color: UIColor!) {
         colorLayerTop = color

@@ -16,7 +16,6 @@ class ColorGradientView: UIView {
     
     init(frame: CGRect, color: UIColor!) {
         super.init(frame: frame)
-        // Call setColor passing it the color that this view was init with
         setColor(color)
     }
 
