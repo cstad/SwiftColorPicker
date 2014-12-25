@@ -33,13 +33,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B6FD68A1A4B60A800F80F18 /* SwiftColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B6FD68A1A4B60A800F80F18 /* SwiftColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftColorPicker.app; path = "/Users/christopherstadler/Google Drive/development/github/mine/SwiftColorPicker/build/Debug-iphoneos/SwiftColorPicker.app"; sourceTree = "<absolute>"; };
 		1B6FD68E1A4B60A800F80F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6FD68F1A4B60A800F80F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B6FD6911A4B60A800F80F18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B6FD6941A4B60A800F80F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B6FD6961A4B60A800F80F18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1B6FD69F1A4B60A800F80F18 /* SwiftColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B6FD69F1A4B60A800F80F18 /* SwiftColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftColorPickerTests.xctest; path = "/Users/christopherstadler/Google Drive/development/github/mine/SwiftColorPicker/build/Debug-iphoneos/SwiftColorPickerTests.xctest"; sourceTree = "<absolute>"; };
 		1B6FD6A41A4B60A800F80F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6FD6A51A4B60A800F80F18 /* SwiftColorPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerTests.swift; sourceTree = "<group>"; };
 		1B6FD6AF1A4B625D00F80F18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -78,17 +78,7 @@
 				1B6FD6B01A4B625D00F80F18 /* README.md */,
 				1B6FD68C1A4B60A800F80F18 /* SwiftColorPicker */,
 				1B6FD6A21A4B60A800F80F18 /* SwiftColorPickerTests */,
-				1B6FD68B1A4B60A800F80F18 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		1B6FD68B1A4B60A800F80F18 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1B6FD68A1A4B60A800F80F18 /* SwiftColorPicker.app */,
-				1B6FD69F1A4B60A800F80F18 /* SwiftColorPickerTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1B6FD68C1A4B60A800F80F18 /* SwiftColorPicker */ = {
@@ -215,7 +205,7 @@
 				Base,
 			);
 			mainGroup = 1B6FD6811A4B60A800F80F18;
-			productRefGroup = 1B6FD68B1A4B60A800F80F18 /* Products */;
+			productRefGroup = 1B6FD6811A4B60A800F80F18;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
