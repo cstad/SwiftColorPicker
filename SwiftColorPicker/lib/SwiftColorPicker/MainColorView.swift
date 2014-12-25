@@ -86,11 +86,17 @@ class MainColorView: UIView {
 
             // Draw selector
             CGContextBeginPath(context)
-            CGContextMoveToPoint(context, 1, getYCoordinate(point.y) + 4)
-            CGContextAddLineToPoint(context, 29, getYCoordinate(point.y) - 4)
-            CGContextAddLineToPoint(context, 29, getYCoordinate(point.y) + 4)
-            CGContextAddLineToPoint(context, 1, getYCoordinate(point.y) - 4)
+            CGContextMoveToPoint(context, 1, getYCoordinate(point.y) - 4)
+            CGContextAddLineToPoint(context, 9, getYCoordinate(point.y))
             CGContextAddLineToPoint(context, 1, getYCoordinate(point.y) + 4)
+            CGContextStrokePath(context)
+            CGContextBeginPath(context)
+            CGContextMoveToPoint(context, 29, getYCoordinate(point.y) - 4)
+            CGContextAddLineToPoint(context, 21, getYCoordinate(point.y))
+            CGContextAddLineToPoint(context, 29, getYCoordinate(point.y) + 4)
+//            CGContextAddLineToPoint(context, 29, getYCoordinate(point.y) + 4)
+//            CGContextAddLineToPoint(context, 1, getYCoordinate(point.y) - 4)
+//            CGContextAddLineToPoint(context, 1, getYCoordinate(point.y) + 4)
             CGContextStrokePath(context)
         }
     }
