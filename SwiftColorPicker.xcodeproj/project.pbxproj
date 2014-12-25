@@ -11,7 +11,6 @@
 		1B6FD6921A4B60A800F80F18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6911A4B60A800F80F18 /* ViewController.swift */; };
 		1B6FD6951A4B60A800F80F18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FD6931A4B60A800F80F18 /* Main.storyboard */; };
 		1B6FD6971A4B60A800F80F18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FD6961A4B60A800F80F18 /* Images.xcassets */; };
-		1B6FD69A1A4B60A800F80F18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FD6981A4B60A800F80F18 /* LaunchScreen.xib */; };
 		1B6FD6A61A4B60A800F80F18 /* SwiftColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6A51A4B60A800F80F18 /* SwiftColorPickerTests.swift */; };
 		1B6FD6B11A4B625D00F80F18 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FD6AF1A4B625D00F80F18 /* LICENSE */; };
 		1B6FD6B21A4B625D00F80F18 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B01A4B625D00F80F18 /* README.md */; };
@@ -40,7 +39,6 @@
 		1B6FD6911A4B60A800F80F18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B6FD6941A4B60A800F80F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B6FD6961A4B60A800F80F18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1B6FD6991A4B60A800F80F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1B6FD69F1A4B60A800F80F18 /* SwiftColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6FD6A41A4B60A800F80F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6FD6A51A4B60A800F80F18 /* SwiftColorPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerTests.swift; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				1B6FD6911A4B60A800F80F18 /* ViewController.swift */,
 				1B6FD6931A4B60A800F80F18 /* Main.storyboard */,
 				1B6FD6961A4B60A800F80F18 /* Images.xcassets */,
-				1B6FD6981A4B60A800F80F18 /* LaunchScreen.xib */,
 				1B6FD68D1A4B60A800F80F18 /* Supporting Files */,
 			);
 			path = SwiftColorPicker;
@@ -234,7 +231,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B6FD6951A4B60A800F80F18 /* Main.storyboard in Resources */,
-				1B6FD69A1A4B60A800F80F18 /* LaunchScreen.xib in Resources */,
 				1B6FD6B11A4B625D00F80F18 /* LICENSE in Resources */,
 				1B6FD6971A4B60A800F80F18 /* Images.xcassets in Resources */,
 			);
@@ -291,14 +287,6 @@
 				1B6FD6941A4B60A800F80F18 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1B6FD6981A4B60A800F80F18 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B6FD6991A4B60A800F80F18 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -456,6 +444,7 @@
 				1B6FD6AB1A4B60A800F80F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B6FD6AC1A4B60A800F80F18 /* Build configuration list for PBXNativeTarget "SwiftColorPickerTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +453,7 @@
 				1B6FD6AE1A4B60A800F80F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
