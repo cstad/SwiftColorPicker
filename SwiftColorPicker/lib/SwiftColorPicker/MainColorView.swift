@@ -8,12 +8,12 @@
 import UIKit
 
 class MainColorView: UIView {
-    var selectedColor: CGFloat = 1.0
+    var color: UIColor!
     var point: CGPoint!
     
     var delegate: ColorPicker?
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, color: UIColor) {
         super.init(frame: frame)
 
         backgroundColor = UIColor.clearColor()
@@ -36,7 +36,10 @@ class MainColorView: UIView {
         colorLayer.frame = CGRect(x: 10, y: 10, width: 10, height: self.frame.size.height - 20)
         // Insert the colorLayer into this views layer as a sublayer
         self.layer.insertSublayer(colorLayer, below: layer)
-
+        
+        self.color = color
+        
+        point = getPointFromColor(color)
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -94,11 +97,17 @@ class MainColorView: UIView {
             CGContextMoveToPoint(context, 29, getYCoordinate(point.y) - 4)
             CGContextAddLineToPoint(context, 21, getYCoordinate(point.y))
             CGContextAddLineToPoint(context, 29, getYCoordinate(point.y) + 4)
-//            CGContextAddLineToPoint(context, 29, getYCoordinate(point.y) + 4)
-//            CGContextAddLineToPoint(context, 1, getYCoordinate(point.y) - 4)
-//            CGContextAddLineToPoint(context, 1, getYCoordinate(point.y) + 4)
             CGContextStrokePath(context)
         }
+    }
+    // Determine crosshair coordinates from a color
+    func getPointFromColor(color: UIColor) -> CGPoint {
+        var hue: CGFloat = 0.0, saturation: CGFloat = 0.0, brightness: CGFloat = 0.0, alpha: CGFloat = 0.0
+        var ok: Bool = color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        if (!ok) {
+            println("ColorPicker: exception <The color provided to ColorPicker is not convertible to HSB>")
+        }
+        return CGPoint(x: 15, y: frame.height - (hue * frame.height))
     }
     // Thanks to mbanasiewicz for this method
     // https://gist.github.com/mbanasiewicz/940677042f5f293caf57

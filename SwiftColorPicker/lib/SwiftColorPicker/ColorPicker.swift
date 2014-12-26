@@ -19,12 +19,15 @@ class ColorPicker: UIView {
     
     var color: UIColor!
     var hue: CGFloat = 1.0
+    var saturation: CGFloat = 1.0
+    var brightness: CGFloat = 1.0
     var percentSaturation: CGFloat = 1.0
     var percentBrightness: CGFloat = 1.0
     
     var smallestDim: CGFloat = 300.0
     
     required init(coder aDecoder: NSCoder) {
+println("colorpicker init")
         super.init(coder: aDecoder)
         // Init the view with a black border
         // Set height and width based on what the dimensions of the view are
@@ -41,6 +44,14 @@ class ColorPicker: UIView {
     }
     
     func setColor(color: UIColor) {
+        var hue: CGFloat = 0.0, saturation: CGFloat = 0.0, brightness: CGFloat = 0.0, alpha: CGFloat = 0.0
+        var ok: Bool = color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        if (!ok) {
+            println("ColorPicker: exception <The color provided to ColorPicker is not convertible to HSB>")
+        }
+        self.hue = hue
+        self.saturation = saturation
+        self.brightness = brightness
         self.color = color
 
         setup()
@@ -53,18 +64,18 @@ class ColorPicker: UIView {
             view.removeFromSuperview()
         }
         // Init new ColorGradientView subview
-        colorView = ColorGradientView(frame: CGRect(x: 20, y: 20, width: smallestDim - 40, height: smallestDim - 40), color: color)
+        colorView = ColorGradientView(frame: CGRect(x: 20, y: 20, width: smallestDim - 40, height: smallestDim - 40), color: UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0))
         // Add colorGradientView as a subview of this view
         self.addSubview(colorView)
         
         // Init new CrossHairView subview
-        crossHairView = CrossHairView(frame: CGRect(x: 0, y: 0, width: smallestDim, height: smallestDim), color: color)
+        crossHairView = CrossHairView(frame: CGRect(x: 0, y: 0, width: smallestDim, height: smallestDim), color: UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0))
         crossHairView.delegate = self
         // Add crossHairView as a subview of this view
         self.addSubview(crossHairView)
         
         // Init new MainColorView subview
-        mainColorView = MainColorView(frame: CGRect(x: smallestDim - 20, y: 10, width: 30, height: smallestDim - 20))
+        mainColorView = MainColorView(frame: CGRect(x: smallestDim - 20, y: 10, width: 30, height: smallestDim - 20), color: color)
         mainColorView.delegate = self
         // Add crossHairView as a subview of this view
         self.addSubview(mainColorView)
@@ -75,10 +86,10 @@ class ColorPicker: UIView {
         self.addSubview(selectedColorView)
     }
     
-    func mainColorSelected(_color: UIColor, point: CGPoint) {
+    func mainColorSelected(color: UIColor, point: CGPoint) {
         hue = (point.y - 11) / (smallestDim - 41)
 
-        color = _color
+        self.color = color
         
         notifyViews(UIColor(hue: hue, saturation: percentSaturation, brightness: percentBrightness, alpha: 1.0))
     }
@@ -92,7 +103,7 @@ class ColorPicker: UIView {
     }
     
     func notifyViews(selectedColor: UIColor) {
-        colorView.setColor(color)
+        colorView.setColor(UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0))
         crossHairView.setColor(selectedColor)
         selectedColorView.setColor(selectedColor)
     }

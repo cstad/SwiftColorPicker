@@ -66,13 +66,13 @@ class CrossHairView: UIView {
             
             // Draw black horizontal crosshair line
             CGContextBeginPath(context)
-            CGContextMoveToPoint(context, 0, getCoordinate(point.y))
-            CGContextAddLineToPoint(context, (self.bounds.width - 20), getCoordinate(point.y))
+            CGContextMoveToPoint(context, 0, getCoordinate(point.y) - 20)
+            CGContextAddLineToPoint(context, (self.bounds.width - 20), getCoordinate(point.y) - 20)
             CGContextStrokePath(context)
             // Draw black vertical crosshair line
             CGContextBeginPath(context)
-            CGContextMoveToPoint(context, getCoordinate(point.x), 0)
-            CGContextAddLineToPoint(context, getCoordinate(point.x), (self.bounds.height - 20))
+            CGContextMoveToPoint(context, getCoordinate(point.x) - 20, 0)
+            CGContextAddLineToPoint(context, getCoordinate(point.x) - 20, (self.bounds.height - 20))
             CGContextStrokePath(context)
             
             // Set color to white
@@ -80,13 +80,13 @@ class CrossHairView: UIView {
             
             // Draw white horizontal crosshair line
             CGContextBeginPath(context)
-            CGContextMoveToPoint(context, 0, getCoordinate(point.y) + 1)
-            CGContextAddLineToPoint(context, (self.bounds.width - 20), getCoordinate(point.y) + 1)
+            CGContextMoveToPoint(context, 0, getCoordinate(point.y) - 19)
+            CGContextAddLineToPoint(context, (self.bounds.width - 20), getCoordinate(point.y) - 19)
             CGContextStrokePath(context)
             // Draw white vertical crosshair line
             CGContextBeginPath(context)
-            CGContextMoveToPoint(context, getCoordinate(point.x) + 1, 0)
-            CGContextAddLineToPoint(context, getCoordinate(point.x) + 1, (self.bounds.height - 20))
+            CGContextMoveToPoint(context, getCoordinate(point.x) - 19, 0)
+            CGContextAddLineToPoint(context, getCoordinate(point.x) - 19, (self.bounds.height - 20))
             CGContextStrokePath(context)
             
             // Set color to black
@@ -94,7 +94,7 @@ class CrossHairView: UIView {
             
             // Draw selected color circle
             // Set the coordinates for the circle origin
-            var p = CGPoint(x: getCoordinate(point.x) - circleRadius, y: getCoordinate(point.y) - circleRadius)
+            var p = CGPoint(x: getCoordinate(point.x) - 20 - circleRadius, y: getCoordinate(point.y) - 20 - circleRadius)
             var rect = CGRect(origin: p, size: CGSize(width: circleRadius * 2, height: circleRadius * 2))
             // Add a circle to the previously defined rect
             CGContextAddEllipseInRect(context, rect)
@@ -106,27 +106,26 @@ class CrossHairView: UIView {
         }
     }
     
-    func setColor(_color: UIColor!) {
+    func setColor(color: UIColor!) {
         // Set member color to the new UIColor coming in
-        color = _color
-        
-        point = getPointFromColor()
-        
+        self.color = color
+        // Set point by inferring it from the color by calling getPointFromColor()
+        point = getPointFromColor(self.color)
         // Update display when possible
         setNeedsDisplay()
     }
     
     func getCoordinate(coord: CGFloat) -> CGFloat {
-        if (coord < 20) {
-            return 20
+        if (coord < 40) {
+            return 40
         }
-        if (coord > (frame.size.height - 20)) {
-            return (frame.size.height - 20)
+        if (coord > frame.size.height) {
+            return frame.size.height
         }
         return coord
     }
     // Determine crosshair coordinates from a color
-    func getPointFromColor() -> CGPoint {
+    func getPointFromColor(color: UIColor) -> CGPoint {
         var hue: CGFloat = 0.0, saturation: CGFloat = 0.0, brightness: CGFloat = 0.0, alpha: CGFloat = 0.0
         var ok: Bool = color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
         if (!ok) {
