@@ -132,6 +132,6 @@ class CrossHairView: UIView {
         if (!ok) {
             println("ColorPicker: exception <The color provided to ColorPicker is not convertible to HSB>")
         }
-        return CGPoint(x: brightness * frame.height, y: saturation * frame.height)
+        return CGPoint(x: brightness * frame.height, y: (saturation * frame.height) - frame.height)
     }
 }
