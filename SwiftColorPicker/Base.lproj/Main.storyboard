@@ -16,13 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8eL-2O-kTU" customClass="ColorPicker" customModule="SwiftColorPicker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BF5-AZ-G5D" customClass="ColorPicker" customModule="SwiftColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="BF5-AZ-G5D" secondAttribute="centerY" id="3Tq-7h-GTm"/>
+                            <constraint firstAttribute="centerX" secondItem="BF5-AZ-G5D" secondAttribute="centerX" id="7O1-YY-5iv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorPicker" destination="BF5-AZ-G5D" id="NaY-Br-Aut"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

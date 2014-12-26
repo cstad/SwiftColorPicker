@@ -14,12 +14,12 @@
 		1B6FD6A61A4B60A800F80F18 /* SwiftColorPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6A51A4B60A800F80F18 /* SwiftColorPickerTests.swift */; };
 		1B6FD6B11A4B625D00F80F18 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1B6FD6AF1A4B625D00F80F18 /* LICENSE */; };
 		1B6FD6B21A4B625D00F80F18 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B01A4B625D00F80F18 /* README.md */; };
-		1B6FD6BB1A4B627600F80F18 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B51A4B627600F80F18 /* Color.swift */; };
 		1B6FD6BC1A4B627600F80F18 /* ColorGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B61A4B627600F80F18 /* ColorGradientView.swift */; };
 		1B6FD6BD1A4B627600F80F18 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B71A4B627600F80F18 /* ColorPicker.swift */; };
 		1B6FD6BE1A4B627600F80F18 /* CrossHairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B81A4B627600F80F18 /* CrossHairView.swift */; };
 		1B6FD6BF1A4B627600F80F18 /* MainColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B91A4B627600F80F18 /* MainColorView.swift */; };
 		1B6FD6C01A4B627600F80F18 /* SelectedColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6BA1A4B627600F80F18 /* SelectedColorView.swift */; };
+		1BBF440E1A4CF9B500FB5D39 /* ColorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF440D1A4CF9B500FB5D39 /* ColorLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,23 +33,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B6FD68A1A4B60A800F80F18 /* SwiftColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = SwiftColorPicker.app; path = "/Users/christopherstadler/Google Drive/development/github/mine/SwiftColorPicker/build/Debug-iphoneos/SwiftColorPicker.app"; sourceTree = "<absolute>"; };
 		1B6FD68E1A4B60A800F80F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6FD68F1A4B60A800F80F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B6FD6911A4B60A800F80F18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B6FD6941A4B60A800F80F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B6FD6961A4B60A800F80F18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1B6FD69F1A4B60A800F80F18 /* SwiftColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = SwiftColorPickerTests.xctest; path = "/Users/christopherstadler/Google Drive/development/github/mine/SwiftColorPicker/build/Debug-iphoneos/SwiftColorPickerTests.xctest"; sourceTree = "<absolute>"; };
 		1B6FD6A41A4B60A800F80F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6FD6A51A4B60A800F80F18 /* SwiftColorPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColorPickerTests.swift; sourceTree = "<group>"; };
 		1B6FD6AF1A4B625D00F80F18 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1B6FD6B01A4B625D00F80F18 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1B6FD6B51A4B627600F80F18 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1B6FD6B61A4B627600F80F18 /* ColorGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorGradientView.swift; sourceTree = "<group>"; };
 		1B6FD6B71A4B627600F80F18 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		1B6FD6B81A4B627600F80F18 /* CrossHairView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrossHairView.swift; sourceTree = "<group>"; };
 		1B6FD6B91A4B627600F80F18 /* MainColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainColorView.swift; sourceTree = "<group>"; };
 		1B6FD6BA1A4B627600F80F18 /* SelectedColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedColorView.swift; sourceTree = "<group>"; };
+		1BBF440B1A4CC59500FB5D39 /* SwiftColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBF440C1A4CC59500FB5D39 /* SwiftColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BBF440D1A4CF9B500FB5D39 /* ColorLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +78,8 @@
 				1B6FD6B01A4B625D00F80F18 /* README.md */,
 				1B6FD68C1A4B60A800F80F18 /* SwiftColorPicker */,
 				1B6FD6A21A4B60A800F80F18 /* SwiftColorPickerTests */,
+				1BBF440B1A4CC59500FB5D39 /* SwiftColorPicker.app */,
+				1BBF440C1A4CC59500FB5D39 /* SwiftColorPickerTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,7 +132,7 @@
 		1B6FD6B41A4B627600F80F18 /* SwiftColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				1B6FD6B51A4B627600F80F18 /* Color.swift */,
+				1BBF440D1A4CF9B500FB5D39 /* ColorLayer.swift */,
 				1B6FD6B61A4B627600F80F18 /* ColorGradientView.swift */,
 				1B6FD6B71A4B627600F80F18 /* ColorPicker.swift */,
 				1B6FD6B81A4B627600F80F18 /* CrossHairView.swift */,
@@ -157,7 +159,7 @@
 			);
 			name = SwiftColorPicker;
 			productName = SwiftColorPicker;
-			productReference = 1B6FD68A1A4B60A800F80F18 /* SwiftColorPicker.app */;
+			productReference = 1BBF440B1A4CC59500FB5D39 /* SwiftColorPicker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1B6FD69E1A4B60A800F80F18 /* SwiftColorPickerTests */ = {
@@ -175,7 +177,7 @@
 			);
 			name = SwiftColorPickerTests;
 			productName = SwiftColorPickerTests;
-			productReference = 1B6FD69F1A4B60A800F80F18 /* SwiftColorPickerTests.xctest */;
+			productReference = 1BBF440C1A4CC59500FB5D39 /* SwiftColorPickerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B6FD6B21A4B625D00F80F18 /* README.md in Sources */,
-				1B6FD6BB1A4B627600F80F18 /* Color.swift in Sources */,
 				1B6FD6921A4B60A800F80F18 /* ViewController.swift in Sources */,
 				1B6FD6C01A4B627600F80F18 /* SelectedColorView.swift in Sources */,
 				1B6FD6BE1A4B627600F80F18 /* CrossHairView.swift in Sources */,
@@ -249,6 +250,7 @@
 				1B6FD6BF1A4B627600F80F18 /* MainColorView.swift in Sources */,
 				1B6FD6901A4B60A800F80F18 /* AppDelegate.swift in Sources */,
 				1B6FD6BD1A4B627600F80F18 /* ColorPicker.swift in Sources */,
+				1BBF440E1A4CF9B500FB5D39 /* ColorLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
