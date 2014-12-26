@@ -8,7 +8,7 @@
 import UIKit
 
 class ColorGradientView: UIView {
-    var color: Color!
+    var colorLayer: ColorLayer!
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
@@ -21,13 +21,13 @@ class ColorGradientView: UIView {
 
     func setColor(_color: UIColor!) {
         // Set member color to the new UIColor coming in
-        color = Color(color: _color)
+        colorLayer = ColorLayer(color: _color)
         // Set colorView sublayers to nil to remove any existing sublayers
         layer.sublayers = nil;
         // Use the size and position of this views frame to create a new frame for the color.colorLayer
-        color.colorLayer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.width)
+        colorLayer.layer.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.width)
         // Insert the color.colorLayer into this views layer as a sublayer
-        layer.insertSublayer(color.colorLayer, atIndex: 0)
+        layer.insertSublayer(colorLayer.layer, atIndex: 0)
         // Init new CAGradientLayer to be used as the grayScale overlay
         var grayScaleLayer = CAGradientLayer()
         // Set the grayScaleLayer colors to black and clear
