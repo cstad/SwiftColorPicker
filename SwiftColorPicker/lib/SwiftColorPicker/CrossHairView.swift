@@ -11,7 +11,6 @@ class CrossHairView: UIView {
     var point: CGPoint!
     var circleRadius: CGFloat = 10.0
     var color: UIColor!
-    var view: UIView = UIView()
     
     var delegate: ColorPicker?
     
@@ -110,6 +109,9 @@ class CrossHairView: UIView {
     func setColor(_color: UIColor!) {
         // Set member color to the new UIColor coming in
         color = _color
+        
+        point = getPointFromColor()
+        
         // Update display when possible
         setNeedsDisplay()
     }
@@ -122,5 +124,14 @@ class CrossHairView: UIView {
             return (frame.size.height - 20)
         }
         return coord
+    }
+    // Determine crosshair coordinates from a color
+    func getPointFromColor() -> CGPoint {
+        var hue: CGFloat = 0.0, saturation: CGFloat = 0.0, brightness: CGFloat = 0.0, alpha: CGFloat = 0.0
+        var ok: Bool = color.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        if (!ok) {
+            println("ColorPicker: exception <The color provided to ColorPicker is not convertible to HSB>")
+        }
+        return CGPoint(x: brightness * frame.height, y: saturation * frame.height)
     }
 }

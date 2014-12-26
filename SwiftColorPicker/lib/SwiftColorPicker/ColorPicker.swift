@@ -33,14 +33,25 @@ class ColorPicker: UIView {
         } else {
             smallestDim = self.frame.size.height
         }
-// TODO: INIT WITH USER DEFINED COLOR
+
         // Init with default color of red
         color = UIColor.redColor()
-        // Call startup method to create the subviews needed for the control
-        startup()
+        // Call setup method to create the subviews needed for the control
+        setup()
     }
     
-    func startup() {
+    func setColor(color: UIColor) {
+        self.color = color
+
+        setup()
+    }
+    
+    func setup() {
+        // Remove all subviews
+        var views = self.subviews
+        for view in views as [UIView] {
+            view.removeFromSuperview()
+        }
         // Init new ColorGradientView subview
         colorView = ColorGradientView(frame: CGRect(x: 20, y: 20, width: smallestDim - 40, height: smallestDim - 40), color: color)
         // Add colorGradientView as a subview of this view
