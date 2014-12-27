@@ -20,6 +20,8 @@
 		1B6FD6BF1A4B627600F80F18 /* MainColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6B91A4B627600F80F18 /* MainColorView.swift */; };
 		1B6FD6C01A4B627600F80F18 /* SelectedColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FD6BA1A4B627600F80F18 /* SelectedColorView.swift */; };
 		1BBF440E1A4CF9B500FB5D39 /* ColorLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF440D1A4CF9B500FB5D39 /* ColorLayer.swift */; };
+		1BC7F2921A4E69BB00185F54 /* ScreenShot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7F2901A4E69BB00185F54 /* ScreenShot1.png */; };
+		1BC7F2931A4E69BB00185F54 /* ScreenShot2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7F2911A4E69BB00185F54 /* ScreenShot2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		1BBF440B1A4CC59500FB5D39 /* SwiftColorPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftColorPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBF440C1A4CC59500FB5D39 /* SwiftColorPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BBF440D1A4CF9B500FB5D39 /* ColorLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorLayer.swift; sourceTree = "<group>"; };
+		1BC7F2901A4E69BB00185F54 /* ScreenShot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot1.png; sourceTree = "<group>"; };
+		1BC7F2911A4E69BB00185F54 /* ScreenShot2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 		1B6FD6811A4B60A800F80F18 = {
 			isa = PBXGroup;
 			children = (
+				1BC7F28F1A4E69BB00185F54 /* images */,
 				1B6FD6B31A4B627600F80F18 /* lib */,
 				1B6FD6AF1A4B625D00F80F18 /* LICENSE */,
 				1B6FD6B01A4B625D00F80F18 /* README.md */,
@@ -140,6 +145,16 @@
 				1B6FD6BA1A4B627600F80F18 /* SelectedColorView.swift */,
 			);
 			path = SwiftColorPicker;
+			sourceTree = "<group>";
+		};
+		1BC7F28F1A4E69BB00185F54 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1BC7F2901A4E69BB00185F54 /* ScreenShot1.png */,
+				1BC7F2911A4E69BB00185F54 /* ScreenShot2.png */,
+			);
+			name = images;
+			path = SwiftColorPicker/images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +237,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BC7F2931A4E69BB00185F54 /* ScreenShot2.png in Resources */,
 				1B6FD6951A4B60A800F80F18 /* Main.storyboard in Resources */,
+				1BC7F2921A4E69BB00185F54 /* ScreenShot1.png in Resources */,
 				1B6FD6B11A4B625D00F80F18 /* LICENSE in Resources */,
 				1B6FD6971A4B60A800F80F18 /* Images.xcassets in Resources */,
 			);

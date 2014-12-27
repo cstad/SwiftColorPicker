@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,19 +18,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BF5-AZ-G5D" customClass="ColorPicker" customModule="SwiftColorPicker" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MSe-yq-4eN" customClass="ColorPicker" customModule="SwiftColorPicker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="0dP-A4-0a8"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="EQH-BW-icJ"/>
+                                    <constraint firstAttribute="width" secondItem="MSe-yq-4eN" secondAttribute="height" multiplier="1:1" id="gp9-E1-ia0"/>
+                                    <constraint firstAttribute="height" constant="300" id="hoK-EJ-dw7"/>
+                                    <constraint firstAttribute="width" constant="300" id="oQR-VZ-SaD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0dP-A4-0a8"/>
+                                        <exclude reference="gp9-E1-ia0"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="BF5-AZ-G5D" secondAttribute="centerY" id="3Tq-7h-GTm"/>
-                            <constraint firstAttribute="centerX" secondItem="BF5-AZ-G5D" secondAttribute="centerX" id="7O1-YY-5iv"/>
+                            <constraint firstItem="MSe-yq-4eN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="OrJ-Pb-XqG"/>
+                            <constraint firstAttribute="centerX" secondItem="MSe-yq-4eN" secondAttribute="centerX" id="myj-U5-Ayi"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorPicker" destination="BF5-AZ-G5D" id="NaY-Br-Aut"/>
+                        <outlet property="colorPicker" destination="MSe-yq-4eN" id="K7c-Bf-Ptz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

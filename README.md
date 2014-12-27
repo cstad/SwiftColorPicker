@@ -3,6 +3,9 @@ SwiftColorPicker
 
 A Photoshop-like color picker for iOS devices implemented in Swift.
 
+![ScreenShot1](images/images/ScreenShot1.jpg)
+![ScreenShot2](images/images/ScreenShot2.jpg)
+
 ##How to use
 Including the SwiftColorPicker in your application is fairly straightforward.
 ###Learning
